@@ -1,0 +1,6 @@
+Country,Capital,EU_member,Language,Currency
+Norway,Oslo,False,Norwegian,NOK
+Sweden,Stockholm,True,Swedish,SEK
+Denmark,Copenhagen,True,Danish,DKK
+Germany,Berlin,True,German,EUR
+France,Paris,True,French,EUR
