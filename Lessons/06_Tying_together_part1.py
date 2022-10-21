@@ -1,9 +1,9 @@
 
 # let's be bankers!
-# this is a very simplified digital bank handling transactions
+# this is a very(!) simplified digital bank handling transactions
 def main():
 
-    # list of transactions where each transaction is a tuple with format (sender account number, receiver account number, amount)
+    # list of transactions where each transaction is a tuple with the format (sender account number, receiver account number, amount)
     transaction_list = [
         (1152, 1978, 550),
         (8736, 1765, 850),
@@ -15,7 +15,7 @@ def main():
     ]
 
     # we will assume this bank is a clearing bank that also handles transactions between other banks
-    # the different banks are identified by the first digit in the account number.
+    # the different banks are identified by the first digit in the account number
     # accounts starting with 1 is this bank, other accounts are other banks
 
     # this bank has an overview of balance for its customers, but not for other banks
@@ -26,14 +26,16 @@ def main():
         1730: 200
     }
 
-    # other banks will be sent info on the change to their accounts. This data is initialized
-    external_account_balance = {}
+    # this will be a dict of dicts, where the first layer is to separate the different external banks, and the second
+    # layer is the account balances for the different customers in the individual external banks
+    external_account_balance = {}  # other banks will be sent info on the change to their accounts. This data is initialized
 
     # accounts can be overdrawn a bit, but will block the transaction if sender account is overdrawn too much
     # these rejected transactions must be stored. This can only be done for internal accounts
     rejected_transfers = []
 
-    # the government is interested in who sends money to whom, and requests and overview of accounts that interact with each other
+    # the government is interested in who sends money to whom, and requests an overview of accounts that interact with each other
+    # the key in this dict will be accoun number, and the value will be a tuple of all connected accounts to that account number
     connections_dict = {}
 
     # iterate over transactions lists
@@ -50,6 +52,7 @@ def main():
             external_account_balance=external_account_balance, rejected_transfers=rejected_transfers
         )
 
+        # calls custom func to create connections dict
         connections_dict = make_connections_overview(sender=sender, receiver=receiver, connections_dict=connections_dict)
 
     print("\nInternal account balance:")
@@ -192,7 +195,7 @@ def make_connections_overview(sender, receiver, connections_dict):
         # creates a new set for the sender
         connections_dict[sender] = {receiver}
 
-    # similar logic to that of sender
+    # similar logic to that of receiver
     if receiver in connections_dict:
         connections_dict[receiver].add(sender)
     else:

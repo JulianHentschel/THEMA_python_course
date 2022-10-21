@@ -1,7 +1,7 @@
 # so far we have only looked at code that executes from top to bottom
 # in this lesson we will learn how to structure code into custom functions that can be called throughout the code
 
-# functions are declared with def followed by an optional function name and ()
+# functions are declared with def followed by a given function name and ()
 # note that code that 'belongs' to the function is indented under the function
 def main():
 

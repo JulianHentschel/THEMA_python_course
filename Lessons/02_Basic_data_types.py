@@ -6,14 +6,14 @@ import sys
 # 1. Boolean
 # 2. Integer
 # 3. String
-# 4. Floting Point Number
+# 4. Floating Point Number
 # 5. Tuple
 # 6. List
 # 7. Set
 # 8. Dictionary
 
 # certain functions and actions in python are very sensitive to what data type the input to this function has.
-# this is why it is important
+# this is why this is important
 
 # 1. Boolean
 print("\n 1. Boolean")
@@ -38,9 +38,9 @@ print(len("THEMA") == 5) # remember len() operator from previous lesson
 print(5 != 4 + 2) # '!=' means not equal to
 print(not 5 == 4 + 2) # equal to previous expression
 
-# you can cast or change to variable to a boolean type using the bool() casting function
+# you can cast or change a variable to a boolean type using the bool() casting function
 non_boolean_variable = 1
-boolean_variable = bool(non_boolean_variable) # this really only makes sense for integers that are 1 or 0
+boolean_variable = bool(non_boolean_variable)  # this really only makes sense for integers that are 1 or 0
 print("Integer represented as a boolean variable:")
 print(boolean_variable)
 
@@ -54,11 +54,11 @@ print("\n2. Integer")
 # Our normal decimal system is of base10
 print(5789)
 print("Is the same as:")
-print((10**3*5) + (10**2*7) + (10**1*8) + (10**0*9)) # ** in python equals ^, so power of.
+print((10**3 * 5) + (10**2 * 7) + (10**1 * 8) + (10**0 * 9))  # ** in python equals ^, so power of.
 
 # the binary system is base2. So in the above logic we would have to switch out 10s for 2s
 print("The binary number 1101 is equal to the decimal number:")
-print((2**3*1) + (2**2*1) + (2**1*0) + (2**0*1))
+print((2**3 * 1) + (2**2 * 1) + (2**1 * 0) + (2**0 * 1))
 
 # a quicker way to transform base2 to base10 is to use the int() casting function
 base2_variable = '1101'
@@ -90,8 +90,8 @@ print("\n3. String")
 # the answer is to have a standardised mapping between bit pattern and characters
 # the ASCII standard is the grandfather of character encoding, and specify the mapping between bytes(8 bits) and charcters
 # this is a link to the mapping table https://ascii-tables.com/
-# as 8 bits only can make 2^8=255 unique bit combinations, this mapping is not sufficient for all languages E.G. æøå
-# to account for this, an extension to ASCII was created, UTF-8. Characters not covered by ASCII will have >byte size
+# as 8 bits only can make 2^8=255 unique bit combinations, this mapping is not sufficient for all signs we would need
+# to account for this, an extension to ASCII was created, UTF-8. Characters not covered by ASCII will have > byte size
 # this is most likely not something you would have to care about, but in some cases when reading in data, encoding standard must be specified
 
 random_string = "Hello people"  # note that strings must be encapsulated in either "" or ''
@@ -103,24 +103,24 @@ print(f"The binary representation of {str(decoded_string)} is : {str(binary_stri
 
 # because strings are a bundle of individual characters, they can be sliced, diced and merged as we want
 string_to_be_sliced = "Ja vi elsker dette landet"
-print(string_to_be_sliced[0])  # return the first character in string
-print(string_to_be_sliced[-1])  # return the last character in string
-print(string_to_be_sliced[:2])  # return the first two characters in string
-print(string_to_be_sliced[-2:])  # return the last two characters in string
-print(string_to_be_sliced[4:9])  # return a slice from the middle section of the string
+print(string_to_be_sliced[0])  # returns the first character in string
+print(string_to_be_sliced[-1])  # returns the last character in string
+print(string_to_be_sliced[:2])  # returns the first two characters in string
+print(string_to_be_sliced[-2:])  # returns the last two characters in string
+print(string_to_be_sliced[4:9])  # returns a slice from the middle section of the string
 print(len(string_to_be_sliced))  # returns the number of characters in string
 
 string_to_be_added = " som det stiger frem"
 combined_string = string_to_be_sliced + string_to_be_added  # adding together two strings is easy.
 # be careful to see if numbers are in string format. When trying to add that together things get funky. E.G. 2+3=23
 print(combined_string)
-print(combined_string.upper()) # upper capitalises all letters, lower() does the opposite.
-word_list = combined_string.split(" ") # .split() allows you to split a string into a list based on a specified delimiter. In this case space
+print(combined_string.upper())  # upper capitalises all letters, lower() does the opposite.
+word_list = combined_string.split(" ")  # .split() allows you to split a string into a list based on a specified delimiter. In this case space
 print(word_list)  # the list data type will be explained further down
 
-combined_string = "_".join(word_list)  #the opposite of split is to join an iterable of strings on a specified delimiter. _ in this case
+combined_string = "_".join(word_list)  # the opposite of split is to join an iterable of strings on a specified delimiter. _ in this case
 print(combined_string)
-print(combined_string.replace("_", " ")) # a regex function where we want to replace the string _ with a space
+print(combined_string.replace("_", " "))  # a regex function where we want to replace the string _ with a space
 
 # 4. Floting Point Number
 print("\n4. Floating Point Number")
@@ -142,13 +142,13 @@ print(integer_number+float_number)  # the results from arithmetics involving a f
 # 5. Tuple
 print("\n5. Tuple")
 # tuples is a data structures that contains other variables and/or data structures.
-# after they are created, they can be changed in any way.
+# after they are created, they can't be changed in any way.
 # should only be used where you have very fixed data you know will not need to be changed.
-# tuples are faster than lists, but lists can be changed. They are immutable, meaning you cant order, append, edit or delete any tuple element
-# no problem with duplicates.
+# tuples are faster than lists, but lists can be changed. They are immutable, meaning you can't order, append, edit or delete any tuple element
+# no problems with duplicates, add whatever you like to a tuple as long as you do it all at once.
 
 #the basic syntax of tuple is:
-my_first_tuple = (3, "four", 5.0)  # the elements in a tuple can only be immutable. Meaning they can be changed
+my_first_tuple = (3, "four", 5.0)  # the elements in a tuple can only be immutable. Meaning they can't be changed
 print(len(my_first_tuple))  # the number of elements in a tuple can be found with len()
 print(my_first_tuple[1])  # access tuple elements using index
 print(my_first_tuple[1:])  # multiple elements can be accessed
@@ -196,7 +196,7 @@ print(3 in my_second_list)  # easy to check if value/element is in list. But Set
 print("\n7. Set")
 # like tuples and lists, sets are also used to store other elements/objects
 # but items in tuples are not ordered and not indexed. Meaning you can't reference them by their place in the Set.
-# objects in Sets have to be unique, and existing objects in set can't be changed. Objects can be added and deleted.
+# objects in sets have to be unique, and existing objects in a set can't be changed. Objects can be added and deleted.
 # what is unique with sets is that each object becomes its own reference, which makes it quick to look up in.
 # it is the same reason why each object must be unique.
 # if you want to read more about this, google hash tables
@@ -230,7 +230,7 @@ print("\n8. Dictionary")
 
 # the syntax goes like this
 my_first_dict = {"September": 30, "October": 31, "November": 30}  # here the unique keys are months, and the value is days in each mont
-# the keys have to be unique and immutable, but the value can be whatever you like
+# the keys have to be unique and immutable, but the value can be whatever you like and can be changed later
 print(my_first_dict)
 
 # the value of each key can be fetched like this:

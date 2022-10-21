@@ -1,6 +1,6 @@
 # iterating, or looping, is an efficient way to repeat the same code on several elements stored together
-# loops can be computing intensive because it goes through one and one element. Particularily if we have loops inside other loops.
-# but despite this, loops are actually a quite efficient computing form when used wisely.
+# loops can be computing intensive because it goes through one and one element. Particularily if we have loops inside other loops (nested loops).
+# but despite this, loops are actually a quite efficient computing approach when used wisely.
 # loops are very predictable for the operating system running your code, and it can optimise its execution
 
 my_list_of_numbers = [23, 45, 22, 31, 12]
@@ -9,6 +9,7 @@ my_list_of_numbers = [23, 45, 22, 31, 12]
 # there are two basic ways we can iterate over a list. Both useful for different situations
 
 # iterating over by index. We create a counting int variable that increases by one for each iteration
+# this is an acceptable use of variable names like i and x. This is an exception, normally such variable names are stupid
 for i in range(len(my_list_of_numbers)):
     if my_list_of_numbers[i] > 30:
         print(f"The value at index {i} is high")

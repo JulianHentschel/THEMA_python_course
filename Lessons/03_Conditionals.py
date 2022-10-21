@@ -1,8 +1,8 @@
 
 # conditional statement is to do a specific operation based on if something is True or False
-# if statements are incredibly useful, but try not to overuse them or at least use them smart
+# if statements are incredibly useful, but try not to overuse them or at least use them smartly
 # what happens in the computer when an if happens, is that it can initiate a "jump" in the command sequence
-# if we have a lot of if statements that makes the program jump back and forth in the execution, the program gets slow
+# if we have a lot of if statements forcing the program jump back and forth in the execution, this impacts performance
 
 a_random_number = 5
 # makes a statement that returns a boolean True or False

@@ -1,13 +1,15 @@
 
-# the first thing that has to be said about python syntax is that
-# to the left of something on a line will comment it out, and avoid it being run as code
+# the first thing that has to be said about python syntax is that # comments out what's left of it
+# meaning that it will avoid being run as code and is good practice to add to explain code
 
 # the code in a python file can either be run from the terminal (the geeky way), or by pressing play in your IDE
-# on execution of code, all the code in the file will be run. If the file imports code from other files, this will also be run
+# on execution of code files, all the code in the file will be run
+# if the file imports code from other files, this will also be run
+# you can also work in a notebook where parts of the code can be run more easily and the results are kept in memory
 
 # python is particularly great because there are so many packages that can be imported into your code.
 # packages are just pieces of code other people have written, so that you don't have to.
-# this is the basic syntax of importing
+# this is the basic syntax of importing:
 
 # importing the whole package
 import os
@@ -37,7 +39,7 @@ the_first_number = 9  # this in Java would be int the_first_number = 9;
 the_second_number = 4  # this in Java would be int the_second_number = 4;
 
 # python does its best in guessing what variable type it is.
-# variable type can also be changed if python guesses wrong, or if this is needed in the program.
+# variable type can also be changed during code execution, or specified clearly by us as coders.
 # more on this in the next lesson
 
 # basic arithmetic is also embedded in python
@@ -47,7 +49,7 @@ print("The sum of the numbers:")
 print(the_sum)
 
 # calculates the modulus of these numbers
-the_modulus = the_first_number%the_second_number
+the_modulus = the_first_number % the_second_number
 print("The modulus of the numbers")
 print(the_modulus)
 
@@ -88,9 +90,9 @@ user_feedback = "Do this!"
 # python use indentation to encapsulate code. Other programming languages can use {} to encapsulate code.
 user_input = input("Input a word: ")
 if len(user_input) > 5:  # checks if length of word is more than 5 characters. More on the use of 'if' later
-    print("User input is over 5 letters")  # this is encapsulated under the above 'if'
+    print("User input is more than 5 letters")  # this is encapsulated under the above 'if'
 else:
-    print("User input is under 5 letters")  # this is encapsulated under the above 'else'
+    print("User input is less than or equal to 5 letters")  # this is encapsulated under the above 'else'
 
 
 # this concludes lesson 1!
