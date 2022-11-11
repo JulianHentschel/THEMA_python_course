@@ -126,7 +126,7 @@ print(combined_string.replace("_", " "))  # a regex function where we want to re
 print("\n4. Floating Point Number")
 # as you remember, integers had a lower and higher value it had to be between.
 # number outside this range, and fractional values like 1.5, are represented as Floating Point numbers, or as a float
-# a floating pont is an approximation of the actual value coded on this format int * base^exp. E.G. 7.6875 = 123*2^-4
+# a floating point is an approximation of the actual value coded on this format int * base^exp. E.G. 7.6875 = 123*2^-4
 # in general it requires more bits to represent floating numbers compared to integers.
 
 # some functions specify that input and/or output must be either integer or float.
