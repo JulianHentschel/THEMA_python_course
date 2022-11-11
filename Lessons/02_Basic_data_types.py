@@ -122,7 +122,7 @@ combined_string = "_".join(word_list)  # the opposite of split is to join an ite
 print(combined_string)
 print(combined_string.replace("_", " "))  # a regex function where we want to replace the string _ with a space
 
-# 4. Floting Point Number
+# 4. Floating Point Number
 print("\n4. Floating Point Number")
 # as you remember, integers had a lower and higher value it had to be between.
 # number outside this range, and fractional values like 1.5, are represented as Floating Point numbers, or as a float
